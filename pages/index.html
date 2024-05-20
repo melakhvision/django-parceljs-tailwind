@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alpine Counter</title>
+        <script type="module" src="../src/index.js"></script>
+        <link href="../src/output.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- <div x-data="counter()" class="container">
+            <h1>
+                Counter: <span x-text="count"></span>
+            </h1>
+            <button @click="increment()" class="p-2 rounded bg-blue-300 hover:bg-blue-700 text-white">Increment</button>
+            <button @click="decrement()">Decrement</button>
+        </div> -->
+        <div class="flex items-center justify-center h-screen">
+            <div class="bg-white p-8 rounded shadow-md w-80">
+                <h2 class="text-2xl font-bold mb-8 text-gray-700">Login</h2>
+                <form method="POST">
+                    <div class="mb-5">
+                        <label for="username" class="block mb-2 text-sm text-gray-600">Username</label>
+                        <input type="text"
+                               id="username"
+                               name="username"
+                               class="w-full px-3 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                               required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="block mb-2 text-sm text-gray-600">Password</label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               class="w-full px-3 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                               required>
+                    </div>
+                    <button type="submit"
+                            class="w-full py-2 px-4 rounded bg-blue-300 hover:bg-blue-700 text-white">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

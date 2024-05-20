@@ -1,0 +1,15 @@
+# .gitignore
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore Parcel's cache directory
+.cache/
+
+# Ignore the build directory
+dist/
+
+# Ignore environment variables
+.env
+.parcel-cache
+dist
