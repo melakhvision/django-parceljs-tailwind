@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="../src/dashboard.js"></script>
+        <link href="../src/output.css" rel="stylesheet">
+        <title>Dashboard</title>
+        <style>
+        .fixed-sidebar {
+            height: 100vh;
+            overflow: auto;
+        }
+        .scrollable-sidebar {
+            height: 100vh;
+            overflow: auto;
+        }
+        .botom-menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            justify-items: flex-end;
+            background-color: brown;
+
+        }
+        </style>
+    </head>
+    <body x-data="dashboard()" class="bg-gray-100">
+        <!-- Fixed Vertical Menu -->
+        <nav :class="isOpen ? 'w-44' : 'w-20'"
+             class="fixed top-0 left-0 h-screen bg-gray-900 shadow-md p-4 flex flex-col justify-between items-center transition-width duration-300 ease-in-out">
+            <!-- Top Section -->
+            <div class="items-center">
+                <button @click="toggle()" class="mb-4 p-2 ml-4 bg-gray-200 rounded">
+                    <svg :class="{'rotate-180': isOpen}"
+                         xmlns="http://www.w3.org/2000/svg"
+                         class="h-6 w-6 transition-transform duration-300"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <a href="#"
+                   class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-500 font-semibold">Home</a>
+                <a href="#"
+                   class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-500 font-semibold">About</a>
+                <a href="#"
+                   class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-500 font-semibold">Services</a>
+            </div>
+            <!-- Bottom Section -->
+            <div>
+                <a href="#"
+                   class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-500 font-semibold">Profile</a>
+                <a href="#"
+                   class="block py-2 px-4 rounded hover:bg-gray-100 text-gray-500 font-semibold">Logout</a>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <div :class="isOpen ? 'ml-44' : 'ml-20'"
+             class="flex-1 p-4 transition-margin duration-300 ease-in-out">
+            <h1 class="text-2xl font-bold">Main Content</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies felis at lorem fermentum, vel tincidunt lacus facilisis.
+            </p>
+            <!-- Add more content here -->
+            <!-- :class="isOpen ? 'w-64' : 'w-44'" -->
+            <!-- :class="isOpen ? 'ml-80' : 'ml-40'"  -->
+        </div>
+    </body>
+</html>
